@@ -1,0 +1,886 @@
+/*general appearance*/
+body {
+    background: #72b9d2;
+}
+
+/*general appearance*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+select, input {
+    padding-left: 2px;
+    padding-right: 5px;
+    box-shadow: 2px 3px 2px #666;
+}
+
+#mainWrapper {
+    position: relative;
+    min-height: 100px; /* 200px*/
+    /* top: 20px; */
+    width: 1100px;
+    height: auto;
+    left: 50%;
+    padding: 15px;
+    margin-left: -550px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    background: grey; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left bottom, #fafafa, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top right, #fafafa, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top right, #fafafa, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top right, #fafafa, white); /* Standard syntax */
+    box-shadow:
+        inset rgba(0,0,0,.5) -3px -3px 8px,
+        inset rgba(255,255,255,.7) 3px 3px 8px,
+        rgba(0,0,0,.8) 3px 3px 8px -3px;
+}
+
+#mainWrapper.offset {
+    margin-top: 25px !important;
+}
+
+#error {
+    width: 100%;
+    font-family: Arial;
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+#logo {
+    margin-top: 35px;
+    width: 100%;
+    height: 130px;
+    background: white;
+    box-shadow: 6px 4px 10px #777;
+}
+#logoContent {
+    width: 1080px;
+    height: 130px;
+    margin: auto;
+}
+#logoContent #logoPicture {
+    height: 115px;
+    margin: 5px 0px 0px 30px;
+}
+#signOut, #changePassw {
+    display: block;
+    margin-left: 950px;
+    margin-top: -100px;
+    color: #00a3f1;
+    font-size: 18px;
+}
+#changePassw {
+    margin-left: 800px;
+    margin-top: -20px;
+    width: 130px;
+}
+
+#menu {
+    display: block;
+    margin: 15px 0px 0px 410px;
+    width: 650px;
+    height: 50px;
+    background: #0c8cc3; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#0c8cc3, #0c8cc3, #004d9b); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#0c8cc3, #0c8cc3, #004d9b); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#0c8cc3, #0c8cc3,#004d9b); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#0c8cc3, #0c8cc3, #004d9b); /* Standard syntax */
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    box-shadow: 3px 4px 10px #96969e;
+}
+#menu table {
+    position: relative;
+    margin-top: -15px;
+    width: 100%;
+}
+#menu table td {
+    padding: 9px 0px 9px 0px;
+    border-right: 2px solid white;
+    text-align: center;
+}
+#menu table td:last-child {
+    border-right: none;
+}
+#menu a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+}
+#menu .active a {
+    color: yellow;
+}
+#menu div:hover {
+    -webkit-animation: flush 1.5s;
+    animation: flush 1.5s;
+    text-decoration: underline;
+}
+
+#subMenu {
+    margin: 10px -40px 20px -34px;
+    height: 32px;
+    width: auto;
+}
+#subMenu .body {
+    display: table-cell;
+    background: url("./../images/subMenuBody.png") repeat-x center;
+    background-size: 19px 32px;
+    height: 32px;
+    width: 1160px;
+    text-align: center;    
+    vertical-align: middle;
+}
+#subMenu a {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+#subMenu span:hover {
+    -webkit-animation: flush 1.5s;
+    animation: flush 1.5s;
+    text-decoration: underline;
+}
+#subMenu .separator,  #subMenu .lastPart {
+    display: table-cell;
+    width: 24px;
+    height: 32px;
+    background: url("./../images/subMenuSeparator.png") no-repeat center;
+    background-size: 24px 32px;
+}
+#subMenu .lastPart {
+    width: 10px;
+    background: url("./../images/subMenuLastPart.png") no-repeat center;
+    background-size: 10px 32px;
+}
+#subMenu .triangleLeft, #subMenu .triangleRight {
+    width: 18px;
+    height: 18px;
+    margin-top: -2px;
+    background: url("./../images/subMenuTriangle.png") no-repeat center;
+    background-size: 19px 21px;
+}
+#subMenu .triangleRight {
+    margin: -18px 0px 0px 1150px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+#subMenu div {
+    padding-bottom: 1px;
+}
+#subMenu div.active a {
+    color: yellow;
+    font-weight: bold;
+}
+
+.blueButton, .redButton {
+    width: 100px; 
+    background: #0186be; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#05acf1, #0194d1, #037db1);  
+    background: -o-linear-gradient(#05acf1, #0194d1, #037db1);  
+    background: -moz-linear-gradient(#05acf1, #0194d1, #037db1);  
+    background: linear-gradient(#05acf1, #0194d1, #037db1);
+    border-radius: 25px;
+    border: 1.5px solid white;
+    box-shadow: 3px 4px 10px #96969e;
+    height: 28px; 
+    line-height: 24px; 
+    font-family: Arial;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    //  padding-right: 3px; 
+    cursor: pointer;
+}
+
+.redButton {
+    background: #c83c3d; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#c83c3d, #cd3f40, #8b1c1f);  
+    background: -o-linear-gradient(#c83c3d, #cd3f40, #8b1c1f);  
+    background: -moz-linear-gradient(#c83c3d, #cd3f40, #8b1c1f);  
+    background: linear-gradient(#c83c3d, #cd3f40, #8b1c1f);
+}
+.flush:hover{
+    animation-name: flush;
+    animation-duration: 1.3s;
+    -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+    -moz-animation-fill-mode:forwards; /*FF 5+*/
+    -o-animation-fill-mode:forwards; /*Not implemented yet*/
+    -ms-animation-fill-mode:forwards; /*IE 10+*/
+    animation-fill-mode:forwards; /*when the spec is finished*/
+}
+@-webkit-keyframes flush {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes flush {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#specialButton {
+    text-align: center;
+    width: 238px !important;
+    height: 36px !important;
+    margin: 8px 0px 2px 0px !important;
+    background: url('./../images/special_button.png') no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+    line-height: 36px !important;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+#footer {
+    position: relative;
+    width: 1000px;
+    height: 100px;
+    left: 50%;
+    margin-left: -500px;
+    top: 120px;
+    padding: 5px 0px 10px 0px; 
+    text-align: center;
+    background-color: white;
+}
+#footer img {
+    padding: 0px 20px 0px 20px;
+}
+
+
+#maincontent {
+    position: relative;
+    margin-top: 20px;
+    padding-left: 5px;
+    width: calc(100%-5px);
+    height: 580px;
+    margin-bottom: 20px;
+}
+
+#pageTitle {
+    height: 30px;
+    text-shadow: 1px 1px 1px #999; 
+    font-family: Arial;
+    color: #128dc3;    
+    font-size: 24px;
+}
+
+.button {
+    animation-name: button-down;
+    animation-duration: 0.7s;
+    -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+    -moz-animation-fill-mode:forwards; /*FF 5+*/
+    -o-animation-fill-mode:forwards; /*Not implemented yet*/
+    -ms-animation-fill-mode:forwards; /*IE 10+*/
+    animation-fill-mode:forwards; /*when the spec is finished*/
+}
+
+.button:hover {
+    animation-name: button-up;
+    animation-duration: 0.7s;
+    -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+    -moz-animation-fill-mode:forwards; /*FF 5+*/
+    -o-animation-fill-mode:forwards; /*Not implemented yet*/
+    -ms-animation-fill-mode:forwards; /*IE 10+*/
+    animation-fill-mode:forwards; /*when the spec is finished*/
+}
+
+/* The animation code */
+@keyframes button-down {
+    0% {-webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);}
+    100% {-webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -o-transform: scale(1);
+          transform: scale(1);}
+}
+
+@keyframes button-up {
+    0% {-webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);}
+    100% {-webkit-transform: scale(1.05);
+          -moz-transform: scale(1.05);
+          -o-transform: scale(1.05);
+          transform: scale(1.05);}
+}
+
+/*Modal Window*/
+.modalWindow {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.2);
+    z-index: 100;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalWindow input {
+    width: 100%;
+    border: 1px solid #999;
+    //height: 25px;
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 3px;
+}
+
+.modalWindow input[type=checkbox] {
+    width: 16px;
+}
+
+.modalHeader h2 {
+    width: 100%;
+    height: 28px;
+    clear: both;
+    padding-top: 6px;
+    color: white;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.modalWindow:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalWindow .modalHeader {
+    padding: 5px 15px 0px 15px;
+    background: #0186be; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#868686, #868686, #545353);  
+    background: -o-linear-gradient(#868686, #868686, #545353);  
+    background: -moz-linear-gradient(#868686, #868686, #545353);  
+    background: linear-gradient(#868686, #868686, #545353);
+}
+
+#modalContent {
+    position: relative;
+    padding: 10px 15px 5px 15px;
+    z-index: 2;
+    font-size: 13px;
+}
+
+.modalFooter div {
+    position: relative;
+    float: right;
+    right: 22px;
+    top: 10px;
+}
+.modalFooter div:first-of-type {
+    right: 12px;
+}
+
+.modalFooter {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background: #F1F1F1;
+    border-top: 1px solid #999;
+    -moz-box-shadow: inset 0px 13px 12px -14px #888;
+    -webkit-box-shadow: inset 0px 13px 12px -14px #888;
+    box-shadow: inset 0px 13px 12px -14px #888;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    z-index: 2;
+}
+
+.modalWindow #closeButton {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 22px;
+    height: 22px;
+}
+
+#modalWrap {
+    position: relative;
+    border-collapse: collapse;
+    width: 600px;
+    height: 400px;
+    margin: 20% auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 14px;
+    box-shadow: 6px 8px 6px #444;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+}
+.modalBackground {
+    position: absolute;
+    background: #4d91c5 url('./../images/money_bkg1.jpg');
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#buttonsLine {
+    position: absolute;
+    width: 1100px;
+    bottom: 0px;
+    margin-bottom: -18px;
+}
+#buttonsLine div {
+    right: 8px;
+    margin-right: 8px;
+    float: right;
+}
+
+#buttonPanel {
+    position: relative;
+    width: 700px;
+    height: 35px;
+    margin: -30px 0px -15px 240px;
+    // border: 1px solid red;
+    padding: 0px;
+}
+#buttonPanel div{
+    right: 8px;
+    margin-right: 8px;
+    float: left;
+}
+
+input[type="text"] {
+    height: 26px !important;    
+}
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"] + label {
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+input[type="radio"] + label span {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: -3px 4px 5px 0;
+    vertical-align: middle;
+    background: url(./../images/radio-button.png) top no-repeat;
+    background-size: 19px 19px;
+    cursor: pointer;
+}
+input[type="radio"]:checked + label span {
+    background: url(./../images/radio-button-checked.png) top no-repeat;
+    background-size: cover;
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label {
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    vertical-align: top;
+}
+input[type="checkbox"] + label span {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: -3px 5px 5px 1px;
+    vertical-align: middle;
+    background: url(./../images/checkbox.png) top no-repeat;
+    background-size: 19px 18px;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background: url(./../images/checkbox-checked.png) top no-repeat;
+    background-size: cover;
+}
+
+
+select {
+    height: 28px;
+    padding-left: 4px;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff url(./../images/arrow_down.png) no-repeat right;
+    background-size: 23px 30px;
+}
+
+input[type="text"] {
+    padding-left: 4px;
+    border-radius: 3px;
+    border: 1px solid #a9a9a9;
+    height: 20px;
+}
+
+#settingsTab1, #settingsTab2 {
+    position: relative;
+    width: 220px;
+    height: 34px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-top: 20px;
+    left: 50%;
+    margin-left: -530px;
+    background: grey; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left bottom, #fafafa, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top right, #fafafa, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top right, #fafafa, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top right, #fafafa, white); /* Standard syntax */
+    box-shadow:
+        inset rgba(0,0,0,.3) -3px -3px 8px,
+        inset rgba(255,255,255,.5) 3px 3px 8px,
+        rgba(0,0,0,.6) 3px 3px 8px -3px;
+    background-image: url(./../images/pivot_settings.png);
+    background-size: cover;
+    cursor: pointer;
+}
+#settingsTab2 {
+    margin-top: -35px;
+    margin-left: -300px;
+    background-image: url(./../images/weather_settings.png);
+}
+
+.grayscale {
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */                              
+}
+
+.center {
+    text-align: center;
+}
+
+#expencesWrap{
+    float: left;
+    width: 655px;
+    height: 595px;
+    margin-left: -2px;
+    //   overflow: hidden;
+}
+#expencesWrapDiv {
+    width: 650px;
+    height: 543px;
+    margin-top: 10px;
+    border: 2px solid black;
+    box-shadow: 4px 4px 6px #777;
+}
+#expencesDiv {
+    font-size: 13px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
+    width: 649px;
+    border-right: 2px solid black;
+}
+
+#expencesWrapDiv table {
+    width: 650px;
+    border-collapse: collapse;
+    table-layout: fixed; 
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
+
+#expencesWrapDiv th, #expencesWrapDiv td {
+    font-family: Arial;
+    border: 1px solid black;
+    padding: 2px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden; 
+}
+#summaryTable th {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background: #ccc;
+}
+
+#expencesTable tr:hover td {
+    background: #f2f2f2;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+    background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0);
+}
+#expencesTable .selected td {
+    background: #e5e8fd;
+    background: -webkit-linear-gradient(#e5e8fd, #e5f1fd, #e5e8fd);  
+    background: -o-linear-gradient(#e5e8fd, #e5f1fd, #e5e8fd);  
+    background: -moz-linear-gradient(#e5e8fd, #e5f1fd, #e5e8fd);  
+    background: linear-gradient(#e5e8fd, #e5f1fd, #e5e8fd);
+}
+
+
+#statisticsDiv {
+    width: 410px;
+    height: 584px;
+    border: 2px solid black;
+    float: right;
+    margin-right: 7px;
+    box-shadow: 4px 4px 6px #777;
+}
+#chartContainer {
+    overflow-y: hidden;
+    height: 300px;
+}
+
+
+.ui-dialog {
+    left: 0;
+    outline: 0 none;
+    padding: 0 !important;
+    position: absolute;
+    top: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 6px 8px 6px #444;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+.ui-dialog .ui-widget-content {
+    position: absolute;
+    background: #F9F9F9;
+    color: #222222;
+}
+.ui-widget-overlay {
+    /*    background: rgba(0,0,0,0.2) url(./../js/ui/images/ui-bg_diagonals-thick_20_666666_40x40.png) 50% 50% repeat;*/
+    background: rgba(0,0,0,0.2);
+    opacity: 5;
+}
+.ui-dialog .ui-dialog-content {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    overflow: hidden;
+    position: relative;
+    padding: 0 !important;
+}
+.ui-dialog .ui-widget-header {
+    height: 28px;
+    padding: 6px 5px 0px 10px !important;
+    background: #0186be; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#868686, #868686, #545353);  
+    background: -o-linear-gradient(#868686, #868686, #545353);  
+    background: -moz-linear-gradient(#868686, #868686, #545353);  
+    background: linear-gradient(#868686, #868686, #545353);
+    margin: 0px !important;
+    font-family: Arial;
+    font-size: 17px !important;
+    font-weight: bold;
+    border: 0;
+    text-shadow: 1px 1px 1px #050a61; 
+    color: #fff;
+}
+.ui-dialog .ui-dialog-titlebar {
+    border-bottom-left-radius: 1px !important;
+    border-bottom-right-radius: 1px !important;
+}
+.ui-dialog .ui-dialog-titlebar span {
+    width: auto;
+}
+.ui-dialog .ui-dialog-titlebar .ui-button {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    float: right;;
+}
+
+
+#ui-datepicker-div {
+    font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+    font-size: 62.5%;
+    z-index: 999999 !important;
+    box-shadow: 2px 3px 2px #666;
+}
+#ui-datepicker-div .ui-widget-header {
+    border: 1px solid #999;
+    background: #004d9b;
+}
+#ui-datepicker-div .ui-state-highlight {
+    border: 1px solid #ccc;
+    background: #ffeb9e;
+}
+#ui-datepicker-div .ui-state-default {
+    color: #0066ff;
+    text-align: center;
+}
+
+
+.ui-tooltip, .arrow:after {
+    background: black;
+    border: 2px solid white !important;
+}
+.ui-tooltip {
+    padding: 6px 12px;
+    color: white;
+    border-radius: 12px;
+    font: bold 12px "Helvetica Neue", Sans-Serif;
+    //  text-transform: uppercase;
+    box-shadow: 2px 3px 2px #666;
+}
+.arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+}
+.arrow.top {
+    top: -16px;
+    bottom: auto;
+}
+.arrow.left {
+    left: 20%;
+}
+.arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.arrow.top:after {
+    bottom: -20px;
+    top: auto;
+}
+
+.dateBox  { width: 73px; }
+#operationBox { width: 115px;}
+#categoryBox { width: 195px;}
+#priceBox { width: 55px;}
+#operationsTable {width: 525px;}
+.accountBox {width: 317px;}
+#accountBox {width: 200px;}
+#dateFrom, #dateTo {width: 70px;}
+
+
+.gray-in {animation: gray-in 1s forwards;}
+.gray-out {animation: gray-out 1s forwards;}
+
+@keyframes gray-in {
+    0% {filter: grayscale(0%); 
+        -webkit-filter: grayscale(0%);}
+    100% {filter: grayscale(100%); 
+          -webkit-filter: grayscale(100%);}
+}
+@keyframes gray-out {
+    0% {filter: grayscale(100%); 
+        -webkit-filter: grayscale(100%);}
+    100% {filter: grayscale(0%); 
+          -webkit-filter: grayscale(0%);}
+}
+
+#deleteExpense p {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 1px 1px 1px #050a61; 
+    position: relative;
+    margin: -39px 0px 0px 62px;
+}
+#deleteExpense #infoImg {
+    height: 37px;
+}
+#deleteExpense .modalBackground {
+    position: absolute;
+    background: #447ba5 url('./../images/money_bkg1.jpg')90%;
+    opacity: 0.8;
+}
+
+.transferFrom, .transferTo {width: 233px;}
+#transfer .priceBox {width: 73px;}
+
+tspan {font-size: 10px;}
+.highcharts-title >tspan {font-size:  13px !important;}
+
+#statisticsTable {
+    width: 97%; 
+    font-size: 10.5px; 
+    font-family: Arial;
+    margin: 0px 5px 0px 6px;
+    box-shadow: 2px 2px 4px #777;
+    border-collapse: collapse;
+}
+
+#statisticsTable th, #statisticsTable td {
+    border: 1px solid black;
+    padding: 0px 3px 0px 3px;
+}
+#statisticsTable td {
+    height: 14px; 
+    font-size: 10px;
+    text-align: center;
+}
+#statisticsTable .left {text-align: left;}
+#statisticsTable tr:last-of-type td, #statisticsTable tr:first-of-type th {
+    background: black;
+    color: white;
+    font-weight: bold;
+    border-right: 1px solid white;
+}
+#statisticsTable tr:first-of-type th:last-of-type {border-right: 1px solid black;}
+#statisticsTable tr:last-of-type td {
+    background: #ccc;
+    color: black;
+    border: 1px solid black;
+}
+
+#expencesWrapDiv table:first-of-type th {
+    background: black;
+    color: white;
+    border-right: 1px solid white;
+}
+#expencesWrapDiv table:first-of-type th:last-of-type {border-right: 1px solid black;}
